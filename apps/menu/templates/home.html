@@ -1,1 +1,39 @@
-<h1> HOME WORKS!</h1>
+{% load static %}
+
+{% block content %}
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <div class="container">
+    <h1>Inicio de Sesión - God Mode</h1>
+    <a href="{% url 'login' %}" class="btn">Admin</a>
+    <a href="{% url 'estudiante' %}" class="btn">Estudiante</a>
+    <a href="{% url 'materia' %}" class="btn">Docente</a>
+  </div>
+{% endblock %}

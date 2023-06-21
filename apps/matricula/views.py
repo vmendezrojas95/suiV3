@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
 from .models import Matricula
+from .forms import MatriculaForm
 
 class MatriculaView(LoginRequiredMixin, View):
     print('MatriculaView')
@@ -18,3 +19,20 @@ class MatriculaView(LoginRequiredMixin, View):
 
         return render(request, 'matricula.html', context)
 
+class CrearMatriculaView(LoginRequiredMixin, View):
+    def get(self, request):
+        form = MatriculaForm()
+        context = {
+            'form': form,
+        }
+        return render(request, 'crear_matricula.html', context)
+
+    def post(self, request):
+        form = MatriculaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('matricula')
+        context = {
+            'form': form,
+        }
+        return render(request, 'crear_matricula.html', context)

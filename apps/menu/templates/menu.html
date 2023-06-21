@@ -1,5 +1,58 @@
 {% extends "base.html" %}
-{% load static%}
-{% block content %}	
-<h1>Bienvenido, {{user.username}} </h1>
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="mt-4">Bienvenido, {{ user.username }}</h1>
+    <p>Selecciona una opción:</p>
+
+    <div class="list-group">
+      <a href="{% url 'materia' %}" class="list-group-item list-group-item-action">
+        <i class="fas fa-calendar-alt"></i> Agregar "Materias"
+      </a>
+      <a href="{% url 'carrera' %}" class="list-group-item list-group-item-action">
+        <i class="fas fa-boxes"></i> Agregar "Carrera/s"
+      </a>
+      <a href="{% url 'estudiante' %}" class="list-group-item list-group-item-action">
+        <i class="fas fa-user-plus"></i> Agregar Alumno
+      </a>
+      <a href="{% url 'matricula' %}" class="list-group-item list-group-item-action">
+        <i class="fas fa-industry"></i> Matricula - Estado - Reporte
+      </a>
+    </div>
+
+    {% if user.is_authenticated %}
+    <div class="dropdown mt-4">
+      <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-tachometer-alt"></i> Cerrar Sesion?, {{ user.username }}
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="{% url 'exit' %}">
+          <i class="far fa-circle text-info"></i> Cerrar Sesión
+        </a>
+      </div>
+    </div>
+    {% else %}
+    <div class="dropdown mt-4">
+      <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-tachometer-alt"></i> Iniciar Sesión
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="{% url 'login' %}">
+          <i class="far fa-circle text-info"></i> Admin
+        </a>
+        <a class="dropdown-item" href="#">
+          <i class="far fa-circle text-warning"></i> Alumno
+        </a>
+        <a class="dropdown-item" href="#">
+          <i class="far fa-circle text-danger"></i> Docente
+        </a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
 {% endblock %}

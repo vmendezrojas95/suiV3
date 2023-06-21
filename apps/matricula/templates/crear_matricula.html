@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <h1>Crear Matrícula</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+  </form>
+  <br>
+  <a href="{% url 'matricula' %}" class="btn btn-primary">Cancelar</a>
+  <a href="{% url 'estudiante' %}" class="btn btn-primary">Agregar Estudiante</a>
+  <a href="{% url 'materia' %}" class="btn btn-primary">Agregar Materia</a>
+{% endblock %}

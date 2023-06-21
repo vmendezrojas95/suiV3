@@ -1,5 +1,6 @@
 from django.urls import path, include
 from .views import menu_view, home_view, products_view, exit_view
+from django.contrib.auth.views import LoginView
 
 urlpatterns = [
     path('', menu_view, name='menu'),

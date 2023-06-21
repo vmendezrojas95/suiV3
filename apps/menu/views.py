@@ -15,6 +15,7 @@ def home_view(request):
 def products_view(request):
     return render(request, 'products.html')
 
+
 def exit_view(request):
     logout(request)
-    return render(request, 'registration/login.html')
+    return render(request, 'home.html')

@@ -1,53 +1,63 @@
 {% extends "base.html" %}
+
 {% load static %}
-{% load widget_tweaks %}
 
 {% block content %}
+  <div class="container mt-4">
+    <h1>Lista de Matrículas</h1>
 
-  <h1>Lista de Matrículas</h1>
+    <div class="card">
+      <div class="card-body">
+        <h2>Estudiantes activos</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Estudiante</th>
+              <th>Materia</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for matricula in matriculas_activos %}
+              <tr>
+                <td>{{ matricula.estudiante }}</td>
+                <td>{{ matricula.materia }}</td>
+                <td>{{ matricula.fecha }}</td>
+                <td>Activo</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-  <h2>Estudiantes activos:</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Estudiante</th>
-        <th>Materia</th>
-        <th>Fecha</th>
-        <th>Estado</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for matricula in matriculas_activos %}
-        <tr>
-          <td>{{ matricula.estudiante }}</td>
-          <td>{{ matricula.materia }}</td>
-          <td>{{ matricula.fecha }}</td>
-          <td>Activo</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+    <div class="card">
+      <div class="card-body">
+        <h2>Estudiantes inactivos</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Estudiante</th>
+              <th>Materia</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for matricula in matriculas_inactivos %}
+              <tr>
+                <td>{{ matricula.estudiante }}</td>
+                <td>{{ matricula.materia }}</td>
+                <td>{{ matricula.fecha }}</td>
+                <td>Inactivo</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-  <h2>Estudiantes inactivos:</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Estudiante</th>
-        <th>Materia</th>
-        <th>Fecha</th>
-        <th>Estado</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for matricula in matriculas_inactivos %}
-        <tr>
-          <td>{{ matricula.estudiante }}</td>
-          <td>{{ matricula.materia }}</td>
-          <td>{{ matricula.fecha }}</td>
-          <td>Inactivo</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
+  </div>
+  <a href="{% url 'crear_matricula' %}" class="btn btn-primary">Agregar Matrícula</a>
 {% endblock %}
