@@ -1,8 +1,8 @@
-# zuiV2
+# suiV3
 
 Descripción :
 
-zuiV2 es un proyecto Django que busca simular el sistema de inscripción a carreras y materias utilizado por algunas instituciones educativas,
+suiV3 es un proyecto Django que busca simular el sistema de inscripción a carreras y materias utilizado por algunas instituciones educativas,
 tomando como ejemplo el SIU GUARANI utilizado por IFTS 18. El proyecto incluye las aplicaciones "carrera", "curso", "docente", "estudiante" y "matricula", 
 cada una con sus respectivos archivos de Django y una carpeta "templates" con los archivos HTML para las vistas.
 
@@ -14,7 +14,7 @@ Virtualenv (opcional)
 
 Instalación:
 
-Clonar el repositorio: git clone https://github.com/vmendezrojas95/zuiV2
+Clonar el repositorio: git clone https://github.com/vmendezrojas95/suiV3
 Navegar al directorio del proyecto: cd IFTSv2
 Crear y activar un entorno virtual (opcional): virtualenv venv && source venv/bin/activate
 Instalar las dependencias: pip install -r requirements.txt
