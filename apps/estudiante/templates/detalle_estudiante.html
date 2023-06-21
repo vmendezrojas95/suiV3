@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+  <h1>Detalle del Estudiante</h1>
+
+  <ul>
+    <li>Legajo: {{ estudiante.legajo }}</li>
+    <li>Nombre: {{ estudiante.nombre }}</li>
+    <li>Apellido: {{ estudiante.apellido }}</li>
+    <li>DNI: {{ estudiante.dni }}</li>
+    <li>Carrera: {{ estudiante.carrera }}</li>
+  </ul>
+
+  <a href="{% url 'datos_estudiantes' %}">Volver a la lista de estudiantes</a>
+
+{% endblock %}

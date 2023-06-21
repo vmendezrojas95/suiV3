@@ -1,0 +1,69 @@
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #f2f2f2;
+    }
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .login-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    .btn {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="login-container">
+    <div class="login-form">
+        <h1>Login</h1>
+
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_username">Nombre de Usuario:</label>
+                <input class="form-control" type="text" name="username" id="id_username" placeholder="Nombre de Usuario">
+            </div>
+
+            <div class="form-group">
+                <label for="id_password">Contraseña:</label>
+                <input class="form-control" type="password" name="password" id="id_password" placeholder="Contraseña">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Iniciar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

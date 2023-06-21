@@ -1,0 +1,26 @@
+# Ignorar los archivos y carpetas generados por el sistema operativo
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Ignorar los archivos creados por el entorno virtual
+venv/
+
+# Ignorar los archivos de configuración local
+*.env
+*.pyc
+*.sqlite3
+
+# Ignorar los archivos de registro
+*.log
+
+# Ignorar los archivos de respaldo
+*~
+
+# Ignorar el archivo de configuración local de PyCharm
+.idea/
+
+# Ignorar los archivos de configuración local de Visual Studio Code
+.vscode/
+*.code-workspace

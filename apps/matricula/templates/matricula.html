@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+  <h1>Lista de Matrículas</h1>
+
+  <h2>Estudiantes activos:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Estudiante</th>
+        <th>Materia</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for matricula in matriculas_activos %}
+        <tr>
+          <td>{{ matricula.estudiante }}</td>
+          <td>{{ matricula.materia }}</td>
+          <td>{{ matricula.fecha }}</td>
+          <td>Activo</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Estudiantes inactivos:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Estudiante</th>
+        <th>Materia</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for matricula in matriculas_inactivos %}
+        <tr>
+          <td>{{ matricula.estudiante }}</td>
+          <td>{{ matricula.materia }}</td>
+          <td>{{ matricula.fecha }}</td>
+          <td>Inactivo</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

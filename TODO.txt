@@ -1,0 +1,27 @@
+# FIX 
+Enable LOGIN
+create view
+
+
+Change "CURSO" to "MATERIA"
+
+cambiar logo "inicar sesion" por "login"
+
+
+-----
+VERSION DE PRUEBA---
+LOGS DE CAMBIOS ACA:
+
+CURSO -> MATERIA
+Se migro todo de 0
+
+Funciona login
+
+agregar materias funmciona
+
+agregar carrera funmciona
+
+FALTA-----
+
+MOSTRAR EL ESTADO DE LAS MATRICULAS - MATRICULAS EN "TRUE"
+
