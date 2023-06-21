@@ -15,17 +15,24 @@ Virtualenv (opcional)
 Instalación:
 
 Clonar el repositorio: git clone https://github.com/vmendezrojas95/suiV3
+
 Navegar al directorio del proyecto: cd IFTSv2
+
 Crear y activar un entorno virtual (opcional): virtualenv venv && source venv/bin/activate
+
 Instalar las dependencias: pip install -r requirements.txt
+
 Crear la base de datos: python manage.py migrate
+
 Crear un superusuario: python manage.py createsuperuser
+
 Ejecutar el servidor: python manage.py runserver
 
 
 Uso:
 
-Para acceder al sitio web, abrir un navegador y visitar http://localhost:8000
+Para acceder al sitio web, abrir un navegador y visitar http://localhost:8000.
+
 Para acceder al panel de administración, visitar http://localhost:8000/admin y utilizar las credenciales del superusuario creado en la instalación.
 
 
