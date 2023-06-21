@@ -14,23 +14,22 @@ Virtualenv (opcional)
 
 Instalación:
 
-Clonar el repositorio: git clone https://github.com/vmendezrojas95/suiV3
+1-Clonar el repositorio: git clone https://github.com/vmendezrojas95/suiV3
 
-Navegar al directorio del proyecto: cd IFTSv2
+2-Navegar al directorio del proyecto: cd IFTSv2
 
-Crear y activar un entorno virtual (opcional): virtualenv venv && source venv/bin/activate
+3-Crear y activar un entorno virtual (opcional): virtualenv venv && source venv/bin/activate
 
-Instalar las dependencias: pip install -r requirements.txt
+4-Instalar las dependencias: pip install -r requirements.txt
 
-Crear la base de datos: python manage.py migrate
+5-Crear la base de datos: python manage.py migrate
 
-Crear un superusuario: python manage.py createsuperuser
+6-Crear un superusuario: python manage.py createsuperuser
 
-Ejecutar el servidor: python manage.py runserver
+7-Ejecutar el servidor: python manage.py runserver
 
 
 Uso:
-
 Para acceder al sitio web, abrir un navegador y visitar http://localhost:8000.
 
 Para acceder al panel de administración, visitar http://localhost:8000/admin y utilizar las credenciales del superusuario creado en la instalación.
@@ -39,8 +38,11 @@ Para acceder al panel de administración, visitar http://localhost:8000/admin y 
 Estructura del proyecto:
 
 IFTSv2/: Carpeta raíz del proyecto.
+
 IFTSv2/apps/: Carpeta que contiene todas las aplicaciones del proyecto.
+
 IFTSv2/apps/carrera/, IFTSv2/apps/curso/, IFTSv2/apps/docente/, IFTSv2/apps/estudiante/, IFTSv2/apps/matricula/: Aplicaciones con sus respectivos archivos de Django y una carpeta templates con los archivos HTML para las vistas.
+
 IFTSv2/requirements.txt: Archivo necesario para instalar las dependencias del proyecto.
 
 
