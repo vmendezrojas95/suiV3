@@ -3,7 +3,7 @@
 Descripción :
 
 suiV3 es un proyecto Django que busca simular el sistema de inscripción a carreras y materias utilizado por algunas instituciones educativas,
-tomando como ejemplo el SIU GUARANI utilizado por IFTS 18. El proyecto incluye las aplicaciones "carrera", "curso", "docente", "estudiante" y "matricula", 
+tomando como ejemplo el utilizado por IFTS 18. El proyecto incluye las aplicaciones "carrera", "curso", "docente", "estudiante" y "matricula", 
 cada una con sus respectivos archivos de Django y una carpeta "templates" con los archivos HTML para las vistas.
 
 Requisitos previos: ( Sujeta cambios)
