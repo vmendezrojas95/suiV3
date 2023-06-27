@@ -12,7 +12,7 @@ class Docente(models.Model):
     def __str__(self):
         return '{} {}'.format(self.nombre, self.apellido)
 
-    def delete(self, *args):
-        self.estado = False
-        self.save()
-        return True
+    #def delete(self, *args):
+     #   self.estado = False
+      #  self.save()
+       # return True

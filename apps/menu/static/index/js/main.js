@@ -2,6 +2,28 @@
     // Handler for .ready() called.
     alert('Todo bien');
   });*/
+
+function editarDocente(dni, legajo, nombre, apellido, correo, carrera, estado, sexo) {
+    console.log("Editando");
+    document.getElementById("dni_editar").value = dni;
+    document.getElementById("legajo_editar").value = legajo;
+    document.getElementById("nombre_editar").value = nombre;
+    document.getElementById("apellido_editar").value = apellido;
+    document.getElementById("correo_editar").value = correo;
+    document.getElementById("carrera_editar").value = carrera;
+    document.getElementById("estado_editar").checked = estado;
+    document.getElementById("sexo_editar").value = sexo;
+    console.log(dni);
+    // mostrar notificacion con dni
+    alert('Editando Docente: ' + dni + ', Al finalizar la edición se creará un nuevo registro con los datos editados');
+}
+
+  function eliminarDocente(dni) {
+    document.getElementById("dni_docente").value = dni;
+    console.log("Eliminado");
+    console.log(dni);
+}
+
 function editarEstudiante(dni, legajo, nombre, apellido, correo, carrera, estado, sexo) {
     console.log("Editando");
     document.getElementById("dni_editar").value = dni;
