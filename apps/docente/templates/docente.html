@@ -115,11 +115,9 @@
                 <thead>
                     <tr>
                         <th>DNI</th>
-                        <th>Legajo</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Correo</th>
-                        <th>Carrera</th>
                         <th>Estado</th>
                         <th>Sexo</th>
                     </tr>
@@ -128,15 +126,13 @@
                     {% for docente in docentes %}
                     <tr>
                         <td>{{ docente.dni }}</td>
-                        <td>{{ docente.legajo }}</td>
                         <td>{{ docente.nombre }}</td>
                         <td>{{ docente.apellido }}</td>
                         <td>{{ docente.correo }}</td>
-                        <td>{{ docente.carrera }}</td>
                         <td>{{ docente.estado }}</td>
                         <td>{{ docente.get_sexo_display }}</td>
                         <td>
-                            <button onclick="editarDocente('{{ docente.dni }}', '{{ docente.legajo }}', '{{ docente.nombre }}', '{{ docente.apellido }}','{{ docente.correo }}','{{ docente.carrera }}')" class="btn btn-dark-outline btn-sm" data-toggle="modal"
+                            <button onclick="editarDocente('{{ docente.dni }}', '{{ docente.nombre }}', '{{ docente.apellido }}','{{ docente.correo }}','{{ docente.estado }}','{{ docente.get_sexo_display }}')" class="btn btn-dark-outline btn-sm" data-toggle="modal"
                                 href="#EditarDocente"><img src="{% static 'index/img/editar.png' %}" alt="Error"
                                     width="30"></button>
                             <button onclick="eliminarDocente('{{ docente.dni }}')" class="btn btn-dark-outline btn-sm"
